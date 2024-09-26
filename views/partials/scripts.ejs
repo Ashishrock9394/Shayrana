@@ -1,1 +1,23 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    function searchContent() {
+    // Get the input value from the search bar
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    
+    // Get all blog post containers
+    const blogPosts = document.querySelectorAll('.blog-post');
+    
+    // Loop through the blog posts and check if the title or content contains the search query
+    blogPosts.forEach(post => {
+        const title = post.querySelector('h3').innerText.toLowerCase();
+        const content = post.querySelector('p').innerText.toLowerCase();
+        
+        // If the title or content matches the search query, display the post, otherwise hide it
+        if (title.includes(query) || content.includes(query)) {
+            post.style.display = 'block';
+        } else {
+            post.style.display = 'none';
+        }
+    });
+}
+</script>
