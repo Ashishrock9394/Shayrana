@@ -4,38 +4,38 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Shayrana</a>
+        <a class="navbar-brand" style="color: #0ef; font-style: bold;" href="#">Shayrana</a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" style="color: #0ef;" href="/">Home</a>
           </li>
           <% if (locals.user) { %>
             <li class="nav-item">
-              <a class="nav-link" href="/blog/addBlog">Add blog</a>
+              <a class="nav-link" style="color: #0ef;" href="/blog/addBlog">Add blog</a>
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" style="color: #0ef;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <%= user.fullName %>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="user/logout">Logout</a></li>
+                <li><a class="dropdown-item" style="color: #0ef;" href="user/logout">Logout</a></li>
                 </ul>
             </li>
            
           <% } else{%>
             <li class="nav-item"></li>
-              <a class="nav-link" href="/user/signup">Create Account</a>
+              <a class="nav-link" style="color: #0ef;" href="/user/signup">Create Account</a>
             </li>
             <li class="nav-item"></li>
-              <a class="nav-link" href="/user/signin">Sign In</a>
+              <a class="nav-link" style="color: #0ef;" href="/user/signin">Sign In</a>
             </li>
             <%} %>
           
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" onclick="searchContent();" type="submit">Search</button>
+          <input class="form-control me-2" style="border-color: #0ef;" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" style="color: #0ef;" onclick="searchContent();" type="submit">Search</button>
         </form>
       </div>
     </div>

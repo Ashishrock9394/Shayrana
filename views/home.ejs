@@ -4,7 +4,7 @@
     <%- include('./partials/header') %>
     <title>Shayrana</title>
   </head>
-  <body>
+  <body style="background-color: #1f242d;">
     <%- include('./partials/nav') %>
     <h3 class="text-primary text-center">Welcome to Shayrana</h3>
 
@@ -12,11 +12,11 @@
       <!-- <div class="container mt-3 row row-cols-3"> -->
       <div class="row mt-2">
         <% blogs.forEach(blog => { %>
-        <div class="col mt-2">
-          <div class="card" style="width: 18rem">
+        <div class="col m-3">
+          <div class="card" style="background-color: #1f242d; width: 18rem; box-shadow: rgb(0, 242, 255, 0.12) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 242, 255, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgb(0, 242, 255, 0.9) 0px -3px 5px;">
             <img src="<%= blog.coverImageURL %>" width="350px" height="350px" class="card-img-top p-1" />
             <div class="card-body">
-              <h5 class="card-title"><%= blog.title%></h5>
+              <h5 class="card-title" style="color: #0ef;"><%= blog.title%></h5>
               <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
             </div>
           </div>
